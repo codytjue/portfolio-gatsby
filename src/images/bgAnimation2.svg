@@ -1,0 +1,24 @@
+<svg width="400" height="714" viewBox="0 0 350 614" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="paint0_linear" x1="242" y1="-162" x2="242" y2="797" gradientUnits="userSpaceOnUse">
+<stop offset="0.135417" stop-color="#E8D7FF" stop-opacity="0"/>
+<stop offset="1" stop-color="#E8D7FF"/>
+</linearGradient>
+   <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+</defs>
+<g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#paint0_linear)" filter="url(#f1)">
+<animate
+   attributeName="d"
+   dur="15000ms"
+   repeatCount="indefinite"
+   values="M276.909 399.408C268.555 218.046 128.64 82.2179 0 0.611328H350V613.132C309.541 556.63 280.899 486.028 276.909 399.408Z;
+
+M184 204C-0.349884 159.768 35.3896 69.6804 0 0.611328H350V613.132C302 406 368.35 248.232 184 204Z;
+
+M276.909 399.408C268.555 218.046 128.64 82.2179 0 0.611328H350V613.132C309.541 556.63 280.899 486.028 276.909 399.408Z;" />
+</path>
+</g>
+</svg>
