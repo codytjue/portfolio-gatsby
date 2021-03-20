@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link, navigate } from "gatsby"
 import logoAnimation from "../images/logoAnimation.svg"
 import egg from "../images/egg.svg"
@@ -8,6 +8,9 @@ import Helmet from "react-helmet"
 export default function Home() {
 
 
+  useEffect(() => {
+    document.body.style.backgroundImage = 'linear-gradient(142deg,#E8D7FF 8.01%, #D5CAFF 85.29%)'
+  })
 
   let handleClick = () => {
     document.getElementById('animation').id = "animation2";

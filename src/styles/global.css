@@ -7,7 +7,8 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(142deg,#E8D7FF 8.01%, #D5CAFF 85.29%);
+  background-image: radial-gradient(farthest-corner at -30px -30px, #6816A9, #30094F);
+  /* background-image: linear-gradient(142deg,#E8D7FF 8.01%, #D5CAFF 85.29%); */
 }
 
 
@@ -18,7 +19,7 @@ body {
 
 #landingContainer {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
