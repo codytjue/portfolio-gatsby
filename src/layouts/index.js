@@ -1,10 +1,8 @@
-import React, { useEffect } from "react"
+import React from "react"
 import logoAnimation from "../images/logoAnimation.svg"
-import bg1 from "../images/bgAnimation1.svg"
-import bg2 from "../images/bgAnimation2.svg"
 import { Link } from "gatsby"
 
-export default ({ children, pageContext }) => {
+const Layout = ({ children, pageContext }) => {
 
   if (pageContext.layout === "landing") {
     return (<>{children}</>)
@@ -12,17 +10,19 @@ export default ({ children, pageContext }) => {
 
   return (
     <div id="testPage">
-        <img src={logoAnimation} id="animation2"></img>
-        <img src={bg1} id="bgAnimation1"></img>
-        <img src={bg2} id="bgAnimation2"></img>
+        <img src={logoAnimation} id="animation2" alt=""></img>
+        <div id="testing">
         <div id="mainContainer">
          <div id="navBar">
            <div><Link to="/about">ABOUT</Link></div>
            <div><Link to="/projects">PROJECTS</Link></div>
-           <div>CONTACT</div>
+           <div><Link to="/contact">CONTACT</Link></div>
          </div>
          <div id="content">{children}</div>
+        </div>
         </div>
     </div>
   )
  }
+
+ export default Layout

@@ -5,7 +5,7 @@
 <stop offset="1" stop-color="#E8D7FF"/>
 </linearGradient>
    <filter id="f1" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
     </filter>
 </defs>
 <g>
