@@ -37,6 +37,11 @@ body {
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
+ -webkit-transition: all 1200ms ease-in-out;
+ -moz-transition:    all 1200ms ease-in-out;
+ -ms-transition:     all 1200ms ease-in-out;
+ -o-transition:      all 1200ms ease-in-out;
+ transition:         all 1200ms ease-in-out;
 }
 
 #ellipse {
@@ -47,6 +52,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transition: width 1000ms ease-in-out 1000ms, opacity 1000ms ease-out;
+  -moz-transition:    width 1000ms ease-in-out 1000ms, opacity 1000ms ease-out;
+  -ms-transition:     width 1000ms ease-in-out 1000ms, opacity 1000ms ease-out;
+  -o-transition:      width 1000ms ease-in-out 1000ms, opacity 1000ms ease-out;
+  transition:         width 1000ms ease-in-out 1000ms, opacity 1000ms ease-out;
 }
 
 #animation2 {
@@ -67,6 +77,11 @@ body {
 
 }
 
+#animation2:hover {
+  cursor: pointer;
+}
+
+
 
 #ellipse2 {
   position: fixed;
@@ -86,32 +101,25 @@ body {
 
 }
 
-#bgAnimation1 {
+#ellipse3 {
   position: fixed;
-  z-index: 0;
+  z-index: 1;
+  width: 250%;
   display: block;
-  left: -10px;
-  bottom: -10px;
-  height: 70%;
-  animation-iteration-count: 1;
-  animation-name: bgFadeIn;
-  animation-duration: 2s;
-}
-
-#bgAnimation2 {
-  position: fixed;
-  z-index: 0;
-  display: block;
-  right: -10px;
-  top: -10px;
-  height: 70%;
-  animation-name: bgFadeIn;
-  animation-duration: 2s;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes bgFadeIn {
   0%   {opacity: 0;}
   100% {opacity: 1}
+}
+
+@keyframes bgFadeOut {
+  0%   {opacity: 1}
+  100% {opacity: 0}
 }
 
 #bgAnimation12 {
@@ -131,11 +139,17 @@ body {
   height: 70%;
 }
 
-#testPage {
+#mainLayout {
  overflow: none;
  width: 100%;
  height: 100%;
 }
+
+#mainLayoutBack {
+  overflow: none;
+  width: 100%;
+  height: 100%;
+ }
 
 #testing {
   overflow: none;
@@ -146,6 +160,18 @@ body {
   background-position: -10px 100px, top -10px right -10px;
   background-size: auto 100%, auto 100%;
   animation-name: bgFadeIn;
+  animation-duration: 2s;
+}
+
+#testingBack {
+  overflow: none;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg");
+  background-repeat: no-repeat;
+  background-position: -10px 100px, top -10px right -10px;
+  background-size: auto 100%, auto 100%;
+  animation-name: bgFadeOut;
   animation-duration: 2s;
 }
 
