@@ -21,7 +21,7 @@ export default function Home() {
     setTimeout(() => {
       document.body.style.backgroundImage = 'url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg"), radial-gradient(farthest-corner at -30px -30px, #6816A9, #30094F)';
   }, 1000)
-    setTimeout(() => {navigate('/about')}, 2000)
+    setTimeout(() => {navigate('/about')}, 1300)
   }
 
 

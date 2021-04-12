@@ -81,7 +81,16 @@ body {
   cursor: pointer;
 }
 
+#animationContainer {
+  z-index: 3;
+  position: fixed;
+  width: 500px;
+  height: 150px;
+}
 
+#animationContainer:hover {
+  cursor: pointer;
+}
 
 #ellipse2 {
   position: fixed;
@@ -103,7 +112,7 @@ body {
 
 #ellipse3 {
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   width: 250%;
   display: block;
   opacity: 0;
@@ -179,7 +188,7 @@ body {
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template-columns: 120px 1fr 100px;
+  grid-template-columns: 100px 1fr 100px;
   grid-template-rows: 100px 1fr 100px;
 }
 
@@ -202,7 +211,9 @@ body {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  padding: 100px;
+  padding: 75px 0 0 0;
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -219,10 +230,31 @@ a:hover {
 }
 
 #projectsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
-  gap: 20px;
+
 }
+
+#projectContainer {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+#slider {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: #FD5CB0;
+  font-family: roboto;
+  font-size: 12px;
+  min-width: 200px;
+}
+
 
 .projectThumbnail {
   background-color: #FD5CB0;
@@ -234,11 +266,12 @@ a:hover {
   cursor: pointer;
 }
 
-#aboutContainer, #contactContainer, #projectsContainer, #missingContainer {
+#aboutContainer, #contactContainer, #projectsContainer, #missingContainer, #projectContainer {
   color: #FD5CB0;
   font-family: Blinker;
   animation-name: bgFadeIn;
   animation-duration: 1200ms;
+  overflow: auto;
 }
 
 #missingContainer {
@@ -246,7 +279,18 @@ a:hover {
   font-size: 100px;
   text-align: center;
 }
-/*
+
+#aboutContainer img {
+  float: left;
+  margin: 0 14px 10px 0;
+}
+
+#aboutContainer span{
+  font-family: Roboto;
+  font-size: 12px;
+}
+
+
 @media screen and (max-width: 600px) {
 
   #animation {
@@ -264,21 +308,45 @@ a:hover {
     display: block;
   }
 
-
   #animation2 {
     z-index: 2;
     position: fixed;
-    padding: 50px;
-    top: -130px;
-    left: -20px;
-    width: 50vh;
-    -webkit-transition: all 1000ms ease-in-out;
-    -moz-transition:    all 1000ms ease-in-out;
-    -ms-transition:     all 1000ms ease-in-out;
-    -o-transition:      all 1000ms ease-in-out;
-    transition:         all 1000ms ease-in-out;
-    transition-delay:   500ms;
+    display: block;
+    top: 30px;
+    left: 220px;
+    width: 350px;
+    min-width: 50px;
+    transform: rotate(20deg) translate(-50%, 10%);
+    -webkit-transition: all 1200ms ease-in-out;
+    -moz-transition:    all 1200ms ease-in-out;
+    -ms-transition:     all 1200ms ease-in-out;
+    -o-transition:      all 1200ms ease-in-out;
+    transition:         all 1200ms ease-in-out;
+    transition-delay: 200ms;
 
+  }
+
+  #navBar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #FD5CB0;
+    animation-name: bgFadeIn;
+    animation-duration: 2s;
+    z-index: 2;
+    font-family: Blinker;
+    font-size: 24px;
+    background-color: white;
+    margin-top: 150px;
+  }
+
+  #animationContainer {
+    z-index: 3;
+    position: fixed;
+    width: 500px;
+    height: 100px;
   }
 
   #ellipse2 {
@@ -295,4 +363,4 @@ a:hover {
     -o-transition:      width 2000ms ease-in-out;
     transition:         width 2000ms ease-in-out;
 
-  }} */
+  }}

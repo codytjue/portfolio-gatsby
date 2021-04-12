@@ -13,7 +13,7 @@ const Layout = ({ children, pageContext }) => {
 
     setTimeout(() => {
       document.body.style.backgroundImage = 'linear-gradient(142deg,#E8D7FF 8.01%, #D5CAFF 85.29%)';
-  }, 850)
+  }, 1000)
     setTimeout(() => {navigate('/')}, 2000)
   }
 
@@ -25,13 +25,15 @@ const Layout = ({ children, pageContext }) => {
 
   return (
     <div id="mainLayout">
-        <img src={logoAnimation} id="animation2" alt="" onClick={handleClick}></img>
+      <a id="animationContainer" onClick={handleClick} onKeyDown={handleClick}>
+      </a>
+        <img src={logoAnimation} id="animation2" alt=""></img>
         <img src={egg} alt="Egg" id="ellipse3"></img>
         <div id="testing">
         <div id="mainContainer">
          <div id="navBar">
            <div><Link to="/about">ABOUT</Link></div>
-           <div><Link to="/projects">PROJECTS</Link></div>
+           <div><Link to="/projects/">PROJECTS</Link></div>
            <div><Link to="/contact">CONTACT</Link></div>
          </div>
          <div id="content">{children}</div>
