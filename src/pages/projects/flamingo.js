@@ -1,9 +1,11 @@
 import React from "react";
-import Slider from "react-animated-slider";
-import 'react-animated-slider/build/horizontal.css';
+import Slider from "react-animated-slider"
+import 'react-animated-slider/build/horizontal.css'
 import flamingo1 from "../../images/flamingo1.png"
 import flamingo2 from "../../images/flamingo2.png"
 import "@fontsource/roboto"
+import backArrow from "../../images/backArrow.svg"
+import forwardArrow from "../../images/forwardArrow.svg"
 
 export default function Flamingo() {
 
@@ -13,13 +15,29 @@ export default function Flamingo() {
     { title: 'Third item', description: 'Lorem ipsum'}
   ];
 
+  const previous = <img src={backArrow} width="32px" padding="0 200px 0 0"></img>
+  const next = <img src={forwardArrow} width="32px"></img>
+
   return (
     <div id="projectContainer">
       <div id="slider">
-        <Slider>
+        <Slider previousButton={previous} nextButton={next} classNames={{
+  slider: 'slider',
+  previousButton: 'previousButton',
+  nextButton: 'nextButton',
+  buttonDisabled: 'disabled',
+  track: 'track',
+  slide: 'slide',
+  hidden: 'hidden',
+  previous: 'previous',
+  current: 'current',
+  next: 'next',
+  animateIn: 'animateIn',
+  animateOut: 'animateOut',
+}}>
           {slides.map((slide, index) => (
-            <div key={index}>
-              <img src={slide.description} height="100%"></img>
+            <div key={index} className="slidesContainer">
+              <img src={slide.description} width="450px" onClick={()=> console.log("test")}></img>
             </div>
           ))}
         </Slider>

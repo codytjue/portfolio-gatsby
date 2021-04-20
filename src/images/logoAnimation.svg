@@ -5,7 +5,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="4000ms"
+             dur="5000ms"
              repeatCount="indefinite"
              values="M119.688,328.714c0.001-6.829,2.277-13.27,3.556-19.872
              c1.856-9.591,2.423-19.306,2.993-28.993c1.066-18.196,8.848-31.876,24.745-41.257c15.43-9.103,30.529-18.774,44.503-30.087
@@ -43,7 +43,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="3200ms"
+             dur="4200ms"
              repeatCount="indefinite"
              values="M96.995,309.703c1.672,11.228,1.111,21.513-2.07,31.591
              c-4.464,14.152-12.154,26.458-21.845,37.589c-4.588,5.266-9.474,10.226-15.21,14.259c-14.334,10.081-27.141,8.046-37.784-5.892
@@ -75,7 +75,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="4200ms"
+             dur="5200ms"
              repeatCount="indefinite"
              values="M328.743,222.194c-10.722-0.427-20.701-1.952-30.775-1.79
              c-3.42,0.055-6.877,0.161-10.234,0.733c-2.564,0.439-2.764-0.521-2.58-2.562c0.803-8.796,3.615-17.058,6.629-25.261
@@ -110,7 +110,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="3700ms"
+             dur="4700ms"
              repeatCount="indefinite"
              values="M711.479,99.781c-0.533,6.356-3.689,13.976-8.029,21.132
              c-11.074,18.257-24.469,34.398-42.672,46.065c-3.672,2.352-7.596,4.078-12.07,4.157c-4.803,0.085-7.594-1.796-9.404-6.316
@@ -145,7 +145,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="3500ms"
+             dur="4500ms"
              repeatCount="indefinite"
              values="M456.131,124.55c-1.182-5.373-4.06-9.69-6.796-14.057
              c-6.815-10.883-15.041-20.781-22.112-31.484c-2.009-3.044-3.864-6.188-5.807-9.276c-0.791-1.257-1.003-2.249,0.41-3.404
@@ -180,7 +180,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="3700ms"
+             dur="4700ms"
              repeatCount="indefinite"
              values="M509.026,36.402c8.073,0.358,14.99,3.981,21.877,7.771
              c11.228,6.177,19.102,15.994,27.336,25.346c12.396,14.072,23.537,29.048,31.229,46.316c4.907,11.004,7.942,22.478,8.513,34.552
@@ -212,7 +212,7 @@
   <path fill-rule="evenodd" clip-rule="evenodd" fill="#FD5CB0">
     <animate
              attributeName="d"
-             dur="3300ms"
+             dur="4300ms"
              repeatCount="indefinite"
              values="M679.141,16.259c0.301-0.259,8.887-9.835,9.479-7.702
              c-1.356,3.175-6.611,15.424-7.849,17.96c-0.784,1.608-0.382,2.4,1.185,3.018c3.189,1.255,6.387,2.515,9.496,3.943

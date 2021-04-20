@@ -37,11 +37,11 @@ body {
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- -webkit-transition: all 1200ms ease-in-out;
- -moz-transition:    all 1200ms ease-in-out;
- -ms-transition:     all 1200ms ease-in-out;
- -o-transition:      all 1200ms ease-in-out;
- transition:         all 1200ms ease-in-out;
+ -webkit-transition: all 1200ms ease-out;
+ -moz-transition:    all 1200ms ease-out;
+ -ms-transition:     all 1200ms ease-out;
+ -o-transition:      all 1200ms ease-out;
+ transition:         all 1200ms ease-out;
 }
 
 #ellipse {
@@ -68,11 +68,11 @@ body {
   width: 400px;
   min-width: 400px;
   transform: rotate(20deg) translate(-50%, 10%);
-  -webkit-transition: all 1200ms ease-in-out;
-  -moz-transition:    all 1200ms ease-in-out;
-  -ms-transition:     all 1200ms ease-in-out;
-  -o-transition:      all 1200ms ease-in-out;
-  transition:         all 1200ms ease-in-out;
+  -webkit-transition: all 1200ms ease-out;
+  -moz-transition:    all 1200ms ease-out;
+  -ms-transition:     all 1200ms ease-out;
+  -o-transition:      all 1200ms ease-out;
+  transition:         all 1200ms ease-out;
   transition-delay: 200ms;
 
 }
@@ -95,7 +95,7 @@ body {
 #ellipse2 {
   position: fixed;
   z-index: 1;
-  width: 250%;
+  width: 350%;
   display: block;
   opacity: 0;
   top: 50%;
@@ -112,8 +112,8 @@ body {
 
 #ellipse3 {
   position: fixed;
-  z-index: 0;
-  width: 250%;
+  z-index: -1;
+  width: 350%;
   display: block;
   opacity: 0;
   top: 50%;
@@ -188,9 +188,30 @@ body {
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template-columns: 100px 1fr 100px;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 125px 1fr 100px;
+  overflow: auto;
 }
+
+#footer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  color: #FD5CB0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer a {
+  margin: 0 10px 0 20px;
+}
+
+#footer a img {
+  width: 30px;
+}
+
 
 #navBar {
   grid-column-start: 2;
@@ -229,9 +250,7 @@ a:hover {
   margin: 0 20px 0 20px;
 }
 
-#projectsContainer {
 
-}
 
 #projectContainer {
   display: grid;
@@ -246,6 +265,17 @@ a:hover {
   grid-column-end: 2;
 }
 
+.slidesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slider {
+  height: 300px;
+}
+
 #text {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -253,18 +283,9 @@ a:hover {
   font-family: roboto;
   font-size: 12px;
   min-width: 200px;
+  padding: 60px 0 0 0 ;
 }
 
-
-.projectThumbnail {
-  background-color: #FD5CB0;
-  width: 120px;
-  height: 100px;
-}
-
-.projectThumbnail:hover {
-  cursor: pointer;
-}
 
 #aboutContainer, #contactContainer, #projectsContainer, #missingContainer, #projectContainer {
   color: #FD5CB0;
@@ -274,15 +295,54 @@ a:hover {
   overflow: auto;
 }
 
+#projectsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+.projectThumbnail img {
+  position: relative;
+  top: 0px;
+}
+
+#aboutContainer {
+  padding: 0 100px 0 100px;
+}
+
+.projectText {
+  width: 300px;
+  margin: 0 0 0 30px;
+}
+
 #missingContainer {
   margin: auto;
   font-size: 100px;
   text-align: center;
 }
 
+@keyframes bobble {
+  0% {
+      transform: translate(0px, 0px);
+  }
+  50% {
+      transform: translate(10px, 20px);
+  }
+  100% {
+      transform: translate(0px, 0px);
+  }
+}
+
 #aboutContainer img {
   float: left;
   margin: 0 14px 10px 0;
+
+}
+
+#aboutContainer img:hover {
+  animation-name: bobble;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 #aboutContainer span{
@@ -290,7 +350,41 @@ a:hover {
   font-size: 12px;
 }
 
+#testing1 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  z-index: 2;
+  opacity: .6;
+}
 
+#testing2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  z-index: 1;
+  top: -20px;
+  opacity: .5;
+  transition: opacity 1000ms, z-index 1000ms;
+}
+
+#testing2:hover {
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 1000ms, z-index 1200ms;
+}
+
+#forwardArrow {
+  position: absolute;
+  right: 50px;
+}
+
+#backArrow {
+  position: absolute;
+  left: 50px;
+}
 @media screen and (max-width: 600px) {
 
   #animation {
@@ -328,7 +422,7 @@ a:hover {
 
   #navBar {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -341,6 +435,37 @@ a:hover {
     background-color: white;
     margin-top: 150px;
   }
+
+  #projectContainer {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #slider {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: #FD5CB0;
+    font-family: roboto;
+    font-size: 12px;
+    min-width: 200px;
+  }
+
 
   #animationContainer {
     z-index: 3;

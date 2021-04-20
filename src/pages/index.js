@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { navigate } from "gatsby"
 import logoAnimation from "../images/logoAnimation.svg"
-import egg from "../images/egg.svg"
+import blobs from "../images/blobsAnimated.svg"
 import Helmet from "react-helmet"
 import "@fontsource/blinker"
 
@@ -31,7 +31,7 @@ export default function Home() {
          <Helmet>
             <title>Cody Jue</title>
         </Helmet>
-        <img src={egg} alt="Egg" id="ellipse"></img>
+        <img src={blobs} alt="Blobs" id="ellipse"></img>
         <img src={logoAnimation} alt="Logo" id="animation"></img>
       </div>
     )
