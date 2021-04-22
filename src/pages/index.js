@@ -4,6 +4,7 @@ import logoAnimation from "../images/logoAnimation.svg"
 import blobs from "../images/blobsAnimated.svg"
 import Helmet from "react-helmet"
 import "@fontsource/blinker"
+import "@fontsource/roboto"
 
 export default function Home() {
 

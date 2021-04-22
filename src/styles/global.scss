@@ -1,3 +1,10 @@
+// Variables
+
+$pink: #FD5CB0;
+$purpleLight: #6816A9;
+$purpleDark: #30094F;
+$bodyText: 12px;
+
 html {
   width: 100%;
   height: 100%;
@@ -65,9 +72,9 @@ body {
   display: block;
   top: 30px;
   left: 250px;
-  width: 400px;
+  width: 500px;
   min-width: 400px;
-  transform: rotate(20deg) translate(-50%, 10%);
+  transform: rotate(20deg) translate(-40%, 0%);
   -webkit-transition: all 1200ms ease-out;
   -moz-transition:    all 1200ms ease-out;
   -ms-transition:     all 1200ms ease-out;
@@ -129,6 +136,50 @@ body {
 @keyframes bgFadeOut {
   0%   {opacity: 1}
   100% {opacity: 0}
+}
+
+@keyframes slideNext {
+  0% {transform: translate(0%, 0%); opacity: 1}
+  100% {transform: translate(-100%, 0%); opacity: 0}
+}
+
+@keyframes slideNext2 {
+  0% {transform: translate(100%, 0%); opacity: 0}
+  100% {transform: translate(0%, 0%); opacity: 1}
+}
+
+@keyframes slideBack {
+  0% {transform: translate(0%, 0%); opacity: 1}
+  100% {transform: translate(100%, 0%); opacity: 0}
+}
+
+@keyframes slideBack2 {
+  0% {transform: translate(-100%, 0%); opacity: 0}
+  100% {transform: translate(0%, 0%); opacity: 1}
+}
+
+.slideNext {
+  animation-name: slideNext;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.slideNext2 {
+  animation-name: slideNext2;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.slideBack {
+  animation-name: slideBack;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.slideBack2 {
+  animation-name: slideBack2;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
 }
 
 #bgAnimation12 {
@@ -198,7 +249,7 @@ body {
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  color: #FD5CB0;
+  color: $pink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,12 +270,12 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  color: #FD5CB0;
+  color: $pink;
   animation-name: bgFadeIn;
   animation-duration: 2s;
   z-index: 2;
   font-family: Blinker;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 #content {
@@ -232,7 +283,7 @@ body {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  padding: 75px 0 0 0;
+  padding: 25px 0 0 0;
   display: flex;
   justify-content: center;
 }
@@ -253,11 +304,11 @@ a:hover {
 
 
 #projectContainer {
-  display: grid;
-  grid-template-columns: 600px 1fr;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: rgb(48, 9, 79, .45);
+  padding: 50px 100px;
 }
 
 #slider {
@@ -279,26 +330,39 @@ a:hover {
 #text {
   grid-column-start: 2;
   grid-column-end: 3;
-  color: #FD5CB0;
+  color: $pink;
   font-family: roboto;
-  font-size: 12px;
+  font-size: $bodyText;
   min-width: 200px;
   padding: 60px 0 0 0 ;
 }
 
+#projectImage:active {
+  animation-name: bgFadeOut;
+  animation-duration: 1200ms;
+}
 
-#aboutContainer, #contactContainer, #projectsContainer, #missingContainer, #projectContainer {
-  color: #FD5CB0;
-  font-family: Blinker;
+#aboutContainer, #contactContainer, #projectsContainer, #missingContainer, #projectsPageWrapper {
+  color: $pink;
   animation-name: bgFadeIn;
   animation-duration: 1200ms;
   overflow: auto;
 }
 
-#projectsContainer {
+.fadeOutAnimation {
+  animation-name: bgFadeOut;
+  animation-duration: 1200ms;
+}
+
+.fadeInAnimation{
+  animation-name: bgFadeIn;
+  animation-duration: 1200ms;
+}
+
+#projectsPageWrapper, #aboutContainer {
   display: flex;
   align-items: center;
-  justify-content: space-evenly
+  overflow: hidden;
 }
 
 .projectThumbnail img {
@@ -310,9 +374,22 @@ a:hover {
   padding: 0 100px 0 100px;
 }
 
-.projectText {
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.bodyText {
   width: 300px;
   margin: 0 0 0 30px;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.aboutBodyText {
+  font-family: Roboto;
+  font-size: 14px;
 }
 
 #missingContainer {
@@ -321,17 +398,6 @@ a:hover {
   text-align: center;
 }
 
-@keyframes bobble {
-  0% {
-      transform: translate(0px, 0px);
-  }
-  50% {
-      transform: translate(10px, 20px);
-  }
-  100% {
-      transform: translate(0px, 0px);
-  }
-}
 
 #aboutContainer img {
   float: left;
@@ -339,15 +405,12 @@ a:hover {
 
 }
 
-#aboutContainer img:hover {
-  animation-name: bobble;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
 #aboutContainer span{
   font-family: Roboto;
-  font-size: 12px;
+}
+
+#aboutText {
+  margin: 0 0 0 20px;
 }
 
 #testing1 {
@@ -359,22 +422,10 @@ a:hover {
   opacity: .6;
 }
 
-#testing2 {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  z-index: 1;
-  top: -20px;
-  opacity: .5;
-  transition: opacity 1000ms, z-index 1000ms;
+.builtWith {
+  font-weight: 700;
 }
 
-#testing2:hover {
-  z-index: 3;
-  opacity: 1;
-  transition: opacity 1000ms, z-index 1200ms;
-}
 
 #forwardArrow {
   position: absolute;
@@ -385,6 +436,23 @@ a:hover {
   position: absolute;
   left: 50px;
 }
+
+#backArrow:hover, #forwardArrow:hover {
+  cursor: pointer;
+}
+
+.githubButton {
+  background-color: $pink;
+  color: $purpleDark;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.githubButton:hover {
+  cursor: pointer;
+}
+//Media Query for Mobile Device Display
+
 @media screen and (max-width: 600px) {
 
   #animation {
@@ -410,7 +478,7 @@ a:hover {
     left: 220px;
     width: 350px;
     min-width: 50px;
-    transform: rotate(20deg) translate(-50%, 10%);
+    transform: rotate(20deg) translate(-45%, 0);
     -webkit-transition: all 1200ms ease-in-out;
     -moz-transition:    all 1200ms ease-in-out;
     -ms-transition:     all 1200ms ease-in-out;
@@ -434,12 +502,6 @@ a:hover {
     font-size: 24px;
     background-color: white;
     margin-top: 150px;
-  }
-
-  #projectContainer {
-    display: block;
-    width: 100%;
-    height: 100%;
   }
 
   #content {

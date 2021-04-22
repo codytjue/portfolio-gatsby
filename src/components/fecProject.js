@@ -1,22 +1,20 @@
 import React, { useState } from "react"
-import flamingo1 from "../images/flamingo1.png"
-import flamingo2 from "../images/flamingo2.png"
 
-function Flamingo() {
+function Fec() {
 
   const [currentImage, setCurrentImage] = useState(flamingo1);
 
-  const handleImageClick = () => {
-    let image = document.getElementById("projectImage");
-    image.classList.add("fadeInAnimation");
-    if (currentImage === flamingo1) {
-      setCurrentImage(flamingo2)
+  // const handleImageClick = () => {
+  //   let image = document.getElementById("projectImage");
+  //   image.classList.add("fadeInAnimation");
+  //   if (currentImage === flamingo1) {
+  //     setCurrentImage(flamingo2)
 
-    } else {
-      setCurrentImage(flamingo1)
-    }
-    setTimeout(()=>{image.classList.remove("fadeInAnimation")}, 1200)
-  }
+  //   } else {
+  //     setCurrentImage(flamingo1)
+  //   }
+  //   setTimeout(()=>{image.classList.remove("fadeInAnimation")}, 1200)
+  // }
 
 
   return (
@@ -24,8 +22,8 @@ function Flamingo() {
     <div className="projectImage">
       <img id="projectImage" src={currentImage} width="500px" onClick={handleImageClick}></img>
     </div>
-    <div className="bodyText">
-      <span className="title">Flamingo</span>
+    <div className="projectText">
+      <span className="projectTitle">Flamingo</span>
       <br/><br/>
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod orci et arcu posuere, in venenatis orci placerat. Nullam ullamcorper vestibulum porta. Ut egestas ante vel arcu lacinia tristique. </span>
       <br/><br/>
@@ -38,4 +36,4 @@ function Flamingo() {
   )
 }
 
-export default Flamingo
+export default Fec;
