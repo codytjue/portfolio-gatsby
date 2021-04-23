@@ -14,6 +14,7 @@ export default function Projects() {
 
   const [currentIndex, setIndex] = useState(0)
   const [exitingIndex, setExitIndex] = useState(0)
+  const [isClickable, setClickable] = useState(true)
   let currentProject = projects[currentIndex];
   let exitingProject = projects[exitingIndex];
 
@@ -42,36 +43,29 @@ export default function Projects() {
   const handleNextProject = () => {
     let projectContainer = document.getElementById("projectContainer");
     let projectContainer2 = document.getElementById("projectContainer2");
+    setClickable(false);
     projectContainer2.classList.remove("hidden")
     projectContainer2.classList.add("slideNext")
     projectContainer.classList.add("slideNext2");
     nextProject();
     setTimeout(()=> {projectContainer2.classList.add("hidden");
       projectContainer2.classList.remove("slideNext");
-      projectContainer.classList.remove("slideNext2");}, 900)
+      projectContainer.classList.remove("slideNext2");
+      setClickable(true)}, 900)
   }
 
   const handleLastProject = () => {
-    // let projectContainer = document.getElementById("projectContainer");
-    // let projectContainer2 = document.getElementById("projectContainer2");
-    // // projectContainer.classList.add("fadeInAnimation");
-    // projectContainer.classList.remove("slideNext2");
-    // projectContainer.classList.remove("slideBack2");
-    // projectContainer.classList.add("slideBack");
-    // setTimeout(()=> {
-    //   projectContainer.classList.remove("slideBack");
-    //   lastProject();
-    //   projectContainer.classList.add("slideBack2");
-    // }, 500)
     let projectContainer = document.getElementById("projectContainer");
     let projectContainer2 = document.getElementById("projectContainer2");
+    setClickable(false);
     projectContainer2.classList.remove("hidden")
     projectContainer2.classList.add("slideBack")
     projectContainer.classList.add("slideBack2");
     nextProject();
     setTimeout(()=> {projectContainer2.classList.add("hidden");
       projectContainer2.classList.remove("slideBack");
-      projectContainer.classList.remove("slideBack2");}, 900)
+      projectContainer.classList.remove("slideBack2");
+      setClickable(true)}, 900)
   }
 
   return (
@@ -82,8 +76,8 @@ export default function Projects() {
       <div id="projectContainer2">
         {exitingProject}
       </div>
-      <img src={backArrow} id="backArrow" width="30px" onClick={handleLastProject}></img>
-      <img src={forwardArrow} id="forwardArrow" width="30px" onClick={handleNextProject}></img>
+      <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
+      <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
     </div>
   )
 }
