@@ -1,10 +1,8 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { navigate } from "gatsby"
 import logoAnimation from "../images/logoAnimation.svg"
 import blobs from "../images/blobsAnimated.svg"
 import Helmet from "react-helmet"
-import "@fontsource/blinker"
-import "@fontsource/roboto"
 
 export default function Home() {
 
@@ -15,6 +13,7 @@ export default function Home() {
     document.body.style.backgroundSize  = "100%";
   })
 
+
   let handleClick = () => {
     document.getElementById('animation').id = "animation2";
     document.getElementById('ellipse').id = 'ellipse2';
@@ -22,7 +21,7 @@ export default function Home() {
     setTimeout(() => {
       document.body.style.backgroundImage = 'url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg"), radial-gradient(farthest-corner at -30px -30px, #6816A9, #30094F)';
   }, 1000)
-    setTimeout(() => {navigate('/about')}, 1300)
+    setTimeout(() => {navigate('/about');}, 1300)
   }
 
 

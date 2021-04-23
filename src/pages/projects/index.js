@@ -57,7 +57,7 @@ export default function Projects() {
   const handleLastProject = () => {
     let projectContainer = document.getElementById("projectContainer");
     let projectContainer2 = document.getElementById("projectContainer2");
-    setClickable(false);
+    setClickable(false)
     projectContainer2.classList.remove("hidden")
     projectContainer2.classList.add("slideBack")
     projectContainer.classList.add("slideBack2");
@@ -70,13 +70,15 @@ export default function Projects() {
 
   return (
     <div id="projectsPageWrapper">
-      <div id="projectContainer">
-        {currentProject}
-      </div>
-      <div id="projectContainer2">
-        {exitingProject}
-      </div>
-      <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
+       <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
+      <div id="testContainer">
+        <div id="projectContainer">
+          {currentProject}
+        </div>
+        <div id="projectContainer2">
+          {exitingProject}
+        </div>
+        </div>
       <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
     </div>
   )
