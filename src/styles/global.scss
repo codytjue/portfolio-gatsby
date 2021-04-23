@@ -139,47 +139,51 @@ body {
 }
 
 @keyframes slideNext {
-  0% {transform: translate(0%, 0%); opacity: 1}
-  100% {transform: translate(-100%, 0%); opacity: 0}
+  0% {transform: translate(-515px, 0%); opacity: 1}
+  100% {transform: translate(-100%, 0%) scale(0.7, 0.7); opacity: 0}
 }
 
 @keyframes slideNext2 {
-  0% {transform: translate(100%, 0%); opacity: 0}
-  100% {transform: translate(0%, 0%); opacity: 1}
+  0% {transform: translate(40%, 0%) scale(0.7, 0.7); opacity: 0}
+  100% {transform: translate(-515px, 0%); opacity: 1}
 }
 
 @keyframes slideBack {
-  0% {transform: translate(0%, 0%); opacity: 1}
-  100% {transform: translate(100%, 0%); opacity: 0}
+  0% {transform: translate(-515px, 0%); opacity: 1}
+  100% {transform: translate(40%, 0%) scale(0.7, 0.7); opacity: 0}
 }
 
 @keyframes slideBack2 {
-  0% {transform: translate(-100%, 0%); opacity: 0}
-  100% {transform: translate(0%, 0%); opacity: 1}
+  0% {transform: translate(-100%, 0%) scale(0.7, 0.7); opacity: 0}
+  100% {transform: translate(-515px, 0%); opacity: 1}
 }
 
 .slideNext {
   animation-name: slideNext;
-  animation-duration: 700ms;
+  animation-duration: 900ms;
   animation-fill-mode: forwards;
 }
 
 .slideNext2 {
   animation-name: slideNext2;
-  animation-duration: 700ms;
+  animation-duration: 900ms;
   animation-fill-mode: forwards;
 }
 
 .slideBack {
   animation-name: slideBack;
-  animation-duration: 700ms;
+  animation-duration: 900ms;
   animation-fill-mode: forwards;
 }
 
 .slideBack2 {
   animation-name: slideBack2;
-  animation-duration: 700ms;
+  animation-duration: 900ms;
   animation-fill-mode: forwards;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 #bgAnimation12 {
@@ -301,6 +305,13 @@ a:hover {
   margin: 0 20px 0 20px;
 }
 
+#container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: rgb(48, 9, 79, .45);
+  padding: 50px 100px;
+}
 
 
 #projectContainer {
@@ -309,6 +320,18 @@ a:hover {
   justify-content: space-evenly;
   background-color: rgb(48, 9, 79, .45);
   padding: 50px 100px;
+  position: absolute;
+  transform: translate(-515px, 0)
+}
+
+#projectContainer2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: rgb(48, 9, 79, .45);
+  padding: 50px 100px;
+  position: absolute;
+  transform: translate(-515px, 0)
 }
 
 #slider {
@@ -380,6 +403,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.subTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .bodyText {
   width: 300px;
   margin: 0 0 0 30px;
@@ -411,6 +439,7 @@ a:hover {
 
 #aboutText {
   margin: 0 0 0 20px;
+  min-width: 300px;
 }
 
 #testing1 {
@@ -453,101 +482,101 @@ a:hover {
 }
 //Media Query for Mobile Device Display
 
-@media screen and (max-width: 600px) {
+// @media screen and (max-width: 600px) {
 
-  #animation {
-    z-index: 2;
-    position: fixed;
-    display: block;
-    margin: auto;
-    width: 90%;
-  }
+//   #animation {
+//     z-index: 2;
+//     position: fixed;
+//     display: block;
+//     margin: auto;
+//     width: 90%;
+//   }
 
-  #ellipse {
-    position: fixed;
-    z-index: 1;
-    width: 80%;
-    display: block;
-  }
+//   #ellipse {
+//     position: fixed;
+//     z-index: 1;
+//     width: 80%;
+//     display: block;
+//   }
 
-  #animation2 {
-    z-index: 2;
-    position: fixed;
-    display: block;
-    top: 30px;
-    left: 220px;
-    width: 350px;
-    min-width: 50px;
-    transform: rotate(20deg) translate(-45%, 0);
-    -webkit-transition: all 1200ms ease-in-out;
-    -moz-transition:    all 1200ms ease-in-out;
-    -ms-transition:     all 1200ms ease-in-out;
-    -o-transition:      all 1200ms ease-in-out;
-    transition:         all 1200ms ease-in-out;
-    transition-delay: 200ms;
+//   #animation2 {
+//     z-index: 2;
+//     position: fixed;
+//     display: block;
+//     top: 30px;
+//     left: 220px;
+//     width: 350px;
+//     min-width: 50px;
+//     transform: rotate(20deg) translate(-45%, 0);
+//     -webkit-transition: all 1200ms ease-in-out;
+//     -moz-transition:    all 1200ms ease-in-out;
+//     -ms-transition:     all 1200ms ease-in-out;
+//     -o-transition:      all 1200ms ease-in-out;
+//     transition:         all 1200ms ease-in-out;
+//     transition-delay: 200ms;
 
-  }
+//   }
 
-  #navBar {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    color: #FD5CB0;
-    animation-name: bgFadeIn;
-    animation-duration: 2s;
-    z-index: 2;
-    font-family: Blinker;
-    font-size: 24px;
-    background-color: white;
-    margin-top: 150px;
-  }
+//   #navBar {
+//     grid-column-start: 1;
+//     grid-column-end: 4;
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-end;
+//     color: #FD5CB0;
+//     animation-name: bgFadeIn;
+//     animation-duration: 2s;
+//     z-index: 2;
+//     font-family: Blinker;
+//     font-size: 24px;
+//     background-color: white;
+//     margin-top: 150px;
+//   }
 
-  #content {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding: 50px 0 0 0;
-    display: flex;
-    justify-content: center;
-  }
+//   #content {
+//     grid-column-start: 2;
+//     grid-column-end: 3;
+//     grid-row-start: 2;
+//     grid-row-end: 3;
+//     padding: 50px 0 0 0;
+//     display: flex;
+//     justify-content: center;
+//   }
 
-  #slider {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
+//   #slider {
+//     grid-column-start: 1;
+//     grid-column-end: 3;
+//   }
 
-  #text {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    color: #FD5CB0;
-    font-family: roboto;
-    font-size: 12px;
-    min-width: 200px;
-  }
+//   #text {
+//     grid-column-start: 2;
+//     grid-column-end: 3;
+//     color: #FD5CB0;
+//     font-family: roboto;
+//     font-size: 12px;
+//     min-width: 200px;
+//   }
 
 
-  #animationContainer {
-    z-index: 3;
-    position: fixed;
-    width: 500px;
-    height: 100px;
-  }
+//   #animationContainer {
+//     z-index: 3;
+//     position: fixed;
+//     width: 500px;
+//     height: 100px;
+//   }
 
-  #ellipse2 {
-    position: fixed;
-    bottom: -200px;
-    right: -20px;
-    z-index: 1;
-    width: 300%;
-    min-width: 900px;
-    overflow: none;
-    -webkit-transition: width 2000ms ease-in-out;
-    -moz-transition:    width 2000ms ease-in-out;
-    -ms-transition:     width 2000ms ease-in-out;
-    -o-transition:      width 2000ms ease-in-out;
-    transition:         width 2000ms ease-in-out;
+//   #ellipse2 {
+//     position: fixed;
+//     bottom: -200px;
+//     right: -20px;
+//     z-index: 1;
+//     width: 300%;
+//     min-width: 900px;
+//     overflow: none;
+//     -webkit-transition: width 2000ms ease-in-out;
+//     -moz-transition:    width 2000ms ease-in-out;
+//     -ms-transition:     width 2000ms ease-in-out;
+//     -o-transition:      width 2000ms ease-in-out;
+//     transition:         width 2000ms ease-in-out;
 
-  }}
+//   }}

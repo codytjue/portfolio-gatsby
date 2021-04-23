@@ -1,8 +1,7 @@
 import React, { useState } from "react"
+import fec1 from "../images/fec1.png"
 
 function Fec() {
-
-  const [currentImage, setCurrentImage] = useState(flamingo1);
 
   // const handleImageClick = () => {
   //   let image = document.getElementById("projectImage");
@@ -20,10 +19,10 @@ function Fec() {
   return (
     <>
     <div className="projectImage">
-      <img id="projectImage" src={currentImage} width="500px" onClick={handleImageClick}></img>
+      <img id="projectImage" src={fec1} width="500px"></img>
     </div>
-    <div className="projectText">
-      <span className="projectTitle">Flamingo</span>
+    <div className="bodyText">
+      <span className="title">Project Catwalk</span>
       <br/><br/>
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod orci et arcu posuere, in venenatis orci placerat. Nullam ullamcorper vestibulum porta. Ut egestas ante vel arcu lacinia tristique. </span>
       <br/><br/>
