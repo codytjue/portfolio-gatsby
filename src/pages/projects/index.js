@@ -61,7 +61,7 @@ export default function Projects() {
     projectContainer2.classList.remove("hidden")
     projectContainer2.classList.add("slideBack")
     projectContainer.classList.add("slideBack2");
-    nextProject();
+    lastProject();
     setTimeout(()=> {projectContainer2.classList.add("hidden");
       projectContainer2.classList.remove("slideBack");
       projectContainer.classList.remove("slideBack2");

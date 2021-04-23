@@ -3,6 +3,9 @@ import { navigate } from "gatsby"
 import logoAnimation from "../images/logoAnimation.svg"
 import blobs from "../images/blobsAnimated.svg"
 import Helmet from "react-helmet"
+import gitImage from "../images/github.svg"
+import emailImage from "../images/email.svg"
+import linkedinImage from "../images/linkedin.svg"
 
 export default function Home() {
 
@@ -27,6 +30,7 @@ export default function Home() {
 
 
     return (
+      <>
       <div id="landingContainer" onClick={handleClick} onKeyDown={handleClick} role="presentation">
          <Helmet>
             <title>Cody Jue</title>
@@ -34,5 +38,13 @@ export default function Home() {
         <img src={blobs} alt="Blobs" id="ellipse"></img>
         <img src={logoAnimation} alt="Logo" id="animation"></img>
       </div>
+      <div id="mobileGreeting">
+          <span>Mobile friendly version coming soon!</span>
+          <br/><br/>
+        <a href="mailto:codytjue@gmail.com"><img src={emailImage}></img></a>
+           <a href="https://www.linkedin.com/in/codytjue/" target="_blank" rel="noopener noreferrer"><img src={linkedinImage}></img></a>
+           <a href="https://github.com/codytjue" target="_blank" rel="noopener noreferrer"><img src={gitImage}></img></a>
+           </div>
+      </>
     )
   }
