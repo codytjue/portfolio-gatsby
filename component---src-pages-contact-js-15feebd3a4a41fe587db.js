@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[501],{262:function(t,e,r){"use strict";r.r(e),r.d(e,{default:function(){return a}});var n=r(7294);r(5444);function a(){return n.createElement("div",{id:"contactContainer"},"This is for contact")}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-15feebd3a4a41fe587db.js.map

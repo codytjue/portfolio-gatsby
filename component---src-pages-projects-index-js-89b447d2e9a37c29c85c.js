@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[216],{8184:function(e,t,r){"use strict";r.r(t),r.d(t,{default:function(){return l}});var n=r(7294),a=r(5444);function l(){return n.createElement("div",{id:"projectsContainer"},[1,2,3,4].map((function(e){return n.createElement(a.rU,{to:"/projects/flamingo"},n.createElement("div",{className:"projectThumbnail"}))})))}}}]);
+//# sourceMappingURL=component---src-pages-projects-index-js-89b447d2e9a37c29c85c.js.map

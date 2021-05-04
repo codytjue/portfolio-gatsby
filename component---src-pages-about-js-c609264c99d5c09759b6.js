@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[682],{5518:function(t,e,r){"use strict";r.r(e),r.d(e,{default:function(){return a}});var n=r(7294);r(5444);function a(){return n.createElement("div",{id:"aboutContainer"},"This is for about me")}}}]);
+//# sourceMappingURL=component---src-pages-about-js-c609264c99d5c09759b6.js.map
