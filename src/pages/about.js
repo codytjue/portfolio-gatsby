@@ -9,13 +9,14 @@ export default function About() {
       <div id="aboutText">
       <span className="title">About Me</span>
       <br/><br/>
-      <span className="aboutBodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod orci et arcu posuere, in venenatis orci placerat. Nullam ullamcorper vestibulum porta. Ut egestas ante vel arcu lacinia tristique. Curabitur nec euismod sem. Donec posuere purus sed eros consequat, sit amet ultricies diam venenatis. Maecenas id congue erat. Maecenas eget justo urna. Nulla dapibus at ipsum et imperdiet. Duis tincidunt sodales enim, eget convallis libero pretium et. Aliquam sagittis felis id vehicula sodales.
+      <span className="aboutBodyText">
+        My name is <b>Cody</b> and I'm a New York-based <b>full-stack software engineer</b> with a creative eye and a passion for building efficient, polished, and immersive digital experiences.
+        <br/><br/>
+        I'm currently working as a Resident for the Hack Reactor Software Engineering Immersive program, providing technical guidance and instruction to students pertaining to Javascript and CS fundamentals, but I'm exploring full-time front-end and full-stack engineer opportunities. <b>If you'd like to work together, I'd love to talk to you!</b>
+        <br/><br/>
+        I'm a reserved Leo, a prolific omnivore , and a newly initiated homebody, splitting my free time equally between reading and playing video games (I'm currently reading <b>Severance by Ling Ma</b> and currently playing <b>Resident Evil: Biohazard</b>).
       <br/><br/>
       </span>
-      <span className="subTitle">Things I've Been Working With:</span>
-      <br/><br/>
-      <span className="aboutBodyText">
-      Vestibulum eu nunc quis neque gravida facilisis ac non elit. Proin ac dapibus ipsum. Suspendisse eu ullamcorper nunc, non venenatis dolor. Sed vestibulum erat faucibus vehicula rutrum.</span>
       </div>
       </div>
     </div>

@@ -16,6 +16,7 @@ body {
   height: 100%;
   background-image: radial-gradient(farthest-corner at -30px -30px, #6816A9, #30094F);
   margin: 0px;
+  background-attachment: fixed;
 }
 
 
@@ -56,7 +57,6 @@ body {
   position: fixed;
   display: block;
   width: 70%;
- /* margin: 0 auto; */
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
@@ -84,7 +84,7 @@ body {
 
 #animation2 {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   display: block;
   top: 30px;
   left: 250px;
@@ -156,21 +156,21 @@ body {
 
 @keyframes slideNext {
   0% {transform: translate(0%, 0%); opacity: 1}
-  100% {transform: translate(-40%, 0%) scale(0.7, 0.7); opacity: 0}
+  100% {transform: translate(-30%, 0%) scale(0.7, 0.7); opacity: 0}
 }
 
 @keyframes slideNext2 {
-  0% {transform: translate(40%, 0%) scale(0.7, 0.7); opacity: 0}
+  0% {transform: translate(30%, 0%) scale(0.7, 0.7); opacity: 0}
   100% {transform: translate(0%, 0%); opacity: 1}
 }
 
 @keyframes slideBack {
   0% {transform: translate(0%, 0%); opacity: 1}
-  100% {transform: translate(40%, 0%) scale(0.7, 0.7); opacity: 0}
+  100% {transform: translate(30%, 0%) scale(0.7, 0.7); opacity: 0}
 }
 
 @keyframes slideBack2 {
-  0% {transform: translate(-40%, 0%) scale(0.7, 0.7); opacity: 0}
+  0% {transform: translate(-30%, 0%) scale(0.7, 0.7); opacity: 0}
   100% {transform: translate(0%, 0%); opacity: 1}
 }
 
@@ -220,19 +220,19 @@ body {
 }
 
 #mainLayout {
-//  overflow: none;
+ overflow: hidden;
  width: 100%;
  height: 100%;
 }
 
 #mainLayoutBack {
-  // overflow: none;
+  overflow: none;
   width: 100%;
   height: 100%;
  }
 
 #testing {
-  // overflow: none;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background-image: url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg");
@@ -241,10 +241,13 @@ body {
   background-size: auto 100%, auto 100%;
   animation-name: bgFadeIn;
   animation-duration: 2s;
+  min-height: 600px;
+  min-width: 1350px;
+  position: absolute;
 }
 
 #testingBack {
-  // overflow: none;
+  overflow: none;
   width: 100%;
   height: 100%;
   background-image: url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg");
@@ -260,7 +263,7 @@ body {
   width: 100%;
   height: 100vh;
   grid-template-columns: 50px 1fr 50px;
-  grid-template-rows: 125px 1fr 100px;
+  grid-template-rows: 125px minmax(450px, auto) 100px;
 }
 
 #footer {
@@ -306,6 +309,7 @@ body {
   display: flex;
   justify-content: center;
   min-width: 1290px;
+  overflow: auto;
 }
 
 a {
@@ -354,6 +358,7 @@ a:hover {
  #testContainer {
    width: 1030px;
    min-height: 402px;
+   overflow: auto;
  }
 
 #slider {
@@ -392,7 +397,7 @@ a:hover {
   color: $pink;
   animation-name: bgFadeIn;
   animation-duration: 1200ms;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .fadeOutAnimation {
@@ -408,7 +413,7 @@ a:hover {
 #projectsPageWrapper, #aboutContainer {
   display: flex;
   align-items: center;
-  // overflow: hidden;
+  overflow: hidden;
 
   justify-content: space-between;
 }
@@ -430,7 +435,7 @@ a:hover {
 .title {
   font-size: 18px;
   font-weight: 700;
-  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .subTitle {
@@ -456,6 +461,13 @@ a:hover {
   text-align: center;
 }
 
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  font-family: Roboto;
+  font-size: 14px;
+}
 
 #aboutContainer img {
   float: left;
@@ -482,7 +494,7 @@ a:hover {
 }
 
 
-.builtWith {
+.bold {
   font-weight: 700;
 }
 
@@ -538,6 +550,33 @@ a:hover {
     display: inline;
   }
 }
+
+@media screen and (max-width: 812px) {
+
+  #animation {
+    z-index: 2;
+    position: fixed;
+    display: block;
+    margin: auto;
+    width: 95%;
+  }
+
+  #ellipse {
+    position: fixed;
+    z-index: 1;
+    width: 85%;
+    display: block;
+  }
+
+  #landingContainer {
+    pointer-events: none;
+  }
+
+  #mobileGreeting {
+    display: inline;
+  }
+}
+
 
 //   #animation2 {
 //     z-index: 2;

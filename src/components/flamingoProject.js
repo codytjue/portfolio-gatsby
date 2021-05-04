@@ -4,35 +4,35 @@ import flamingo2 from "../images/flamingo2.png"
 
 function Flamingo() {
 
-  const [currentImage, setCurrentImage] = useState(flamingo1);
+  // const [currentImage, setCurrentImage] = useState(flamingo1);
 
-  const handleImageClick = () => {
-    let image = document.getElementById("projectImage");
-    image.classList.add("fadeInAnimation");
-    if (currentImage === flamingo1) {
-      setCurrentImage(flamingo2)
+  // const handleImageClick = () => {
+  //   let image = document.getElementById("projectImage");
+  //   image.classList.add("fadeInAnimation");
+  //   if (currentImage === flamingo1) {
+  //     setCurrentImage(flamingo2)
 
-    } else {
-      setCurrentImage(flamingo1)
-    }
-    setTimeout(()=>{image.classList.remove("fadeInAnimation")}, 1200)
-  }
+  //   } else {
+  //     setCurrentImage(flamingo1)
+  //   }
+  //   setTimeout(()=>{image.classList.remove("fadeInAnimation")}, 1200)
+  // }
 
 
   return (
     <>
     <div className="projectImage">
-      <img id="projectImage" src={currentImage} width="500px" onClick={handleImageClick}></img>
+      <img id="projectImage" src={flamingo1} width="500px"></img>
     </div>
     <div className="bodyText">
       <span className="title">Flamingo</span>
       <br/><br/>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod orci et arcu posuere, in venenatis orci placerat. Nullam ullamcorper vestibulum porta. Ut egestas ante vel arcu lacinia tristique. </span>
+      <span>Flamingo is a hotel property management software which was built with a team of 10 other engineers, featuring room, task, and employee management. I acted as the UI Lead and worked on the front end, creating detailed wireframes for the entire application and building out a small reusable component library.</span>
       <br/><br/>
-      <span className="builtWith">Built With:</span><span> React, Node.js, Express, Axios, MongoDB</span>
+      <span className="bold">Built With:</span><span> Figma, React (Hooks, Context), Styled Components, Axios</span>
       <br/><br/>
       <br/>
-      <span className="githubButton">View on Github</span>
+      <a href="https://github.com/hrnyc34-flaminGo/flaminGo-frontEnd" target="_blank" rel="noopener noreferrer"><span className="githubButton">See More on Github</span></a>
     </div>
     </>
   )
