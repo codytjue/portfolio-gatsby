@@ -38,7 +38,6 @@ body {
 #mobileGreeting {
   width: 100%;
   position: absolute;
-  bottom: 150px;
   text-align: center;
   font-family: roboto;
   color: $pink;
@@ -241,8 +240,8 @@ body {
   background-size: auto 100%, auto 100%;
   animation-name: bgFadeIn;
   animation-duration: 2s;
-  min-height: 600px;
-  min-width: 1350px;
+  // min-height: 600px;
+  // min-width: 1350px;
   position: absolute;
 }
 
@@ -286,19 +285,19 @@ body {
 }
 
 
-#navBar {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: $pink;
-  animation-name: bgFadeIn;
-  animation-duration: 2s;
-  z-index: 2;
-  font-family: Blinker;
-  font-size: 28px;
-}
+// #navBar {
+//   grid-column-start: 2;
+//   grid-column-end: 3;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   color: $pink;
+//   animation-name: bgFadeIn;
+//   animation-duration: 2s;
+//   z-index: 2;
+//   font-family: Blinker;
+//   font-size: 28px;
+// }
 
 #content {
   grid-column-start: 2;
@@ -308,7 +307,7 @@ body {
   padding: 25px 0 0 0;
   display: flex;
   justify-content: center;
-  min-width: 1290px;
+  // min-width: 1290px;
   overflow: auto;
 }
 
@@ -321,9 +320,9 @@ a:hover {
   text-decoration: underline;
 }
 
-#navBar div {
-  margin: 0 20px 0 20px;
-}
+// #navBar div {
+//   margin: 0 20px 0 20px;
+// }
 
 #container {
   display: flex;
@@ -331,34 +330,55 @@ a:hover {
   justify-content: space-evenly;
   background-color: rgb(48, 9, 79, .45);
   padding: 50px 100px;
-  min-width: 830px
+  // min-width: calc(100vh - 200px)
 }
 
-
-#projectContainer {
+#p1, #p2 {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+
+#projectContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   background-color: rgb(48, 9, 79, .45);
   padding: 50px 100px;
-  position: absolute;
+  // width: calc(100vw - 200px);
+  margin-left: auto;
+  margin-right: auto;
+  // left: 0;
+  // right: 0;
+  // text-align: center;
   // transform: translate(-515px, 0)
 }
+
+
 
 #projectContainer2 {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: rgb(48, 9, 79, .45);
   padding: 50px 100px;
-  position: absolute;
+  // width: calc(100vw - 200px);
+  margin-left: auto;
+  margin-right: auto;
+  // left: 0;
+  // right: 0;
+  // text-align: center;
   //  transform: translate(-515px, 0)
  }
 
  #testContainer {
-   width: 1030px;
-   min-height: 402px;
-   overflow: auto;
+  width: 100vw;
  }
 
 #slider {
@@ -411,16 +431,16 @@ a:hover {
 }
 
 #projectsPageWrapper, #aboutContainer {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+  // display: flex;
+  // align-items: center;
+  // overflow: hidden;
 
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 #projectsPageWrapper {
 
-  padding: 50px 100px 0 100px;
+  // padding: 50px 100px 0 100px;
 }
 
 .projectThumbnail img {
@@ -481,7 +501,7 @@ ul {
 
 #aboutText {
   margin: 0 0 0 20px;
-  min-width: 300px;
+  // min-width: 300px;
 }
 
 #testing1 {
@@ -505,8 +525,8 @@ ul {
 }
 
 #backArrow {
-  position: relative;
-  left: -50px;
+  position: absolute;
+  left: 20px;
 }
 
 #backArrow:hover, #forwardArrow:hover {
@@ -525,30 +545,48 @@ ul {
 }
 //Media Query for Mobile Device Display
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
 
-  #animation {
-    z-index: 2;
-    position: fixed;
-    display: block;
+
+  #container {
+    padding: 50px 50px;
+    // min-width: 830px
+  }
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+  #mainContainer {
+    grid-template-columns: 0px 1fr 0px;
+  }
+
+  #container {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #aboutText {
+    min-width: 100px;
     margin: auto;
-    width: 95%;
+}
+
+#aboutContainer img {
+  float: none;
+  margin: auto;
+}
+
+  #aboutContainer{
+    padding: 100px 50px 0 50px;
+    overflow: scroll;
   }
 
-  #ellipse {
-    position: fixed;
-    z-index: 1;
-    width: 85%;
-    display: block;
+  #animationContainer {
+    width: 100%;
   }
 
-  #landingContainer {
-    pointer-events: none;
-  }
 
-  #mobileGreeting {
-    display: inline;
-  }
 }
 
 @media screen and (max-width: 812px) {
@@ -568,9 +606,9 @@ ul {
     display: block;
   }
 
-  #landingContainer {
-    pointer-events: none;
-  }
+  // #landingContainer {
+  //   pointer-events: none;
+  // }
 
   #mobileGreeting {
     display: inline;
@@ -578,84 +616,41 @@ ul {
 }
 
 
-//   #animation2 {
-//     z-index: 2;
-//     position: fixed;
-//     display: block;
-//     top: 30px;
-//     left: 220px;
-//     width: 350px;
-//     min-width: 50px;
-//     transform: rotate(20deg) translate(-45%, 0);
-//     -webkit-transition: all 1200ms ease-in-out;
-//     -moz-transition:    all 1200ms ease-in-out;
-//     -ms-transition:     all 1200ms ease-in-out;
-//     -o-transition:      all 1200ms ease-in-out;
-//     transition:         all 1200ms ease-in-out;
-//     transition-delay: 200ms;
 
-//   }
+@media screen and (max-width: 600px) {
 
-//   #navBar {
-//     grid-column-start: 1;
-//     grid-column-end: 4;
-//     display: flex;
-//     justify-content: center;
-//     align-items: flex-end;
-//     color: #FD5CB0;
-//     animation-name: bgFadeIn;
-//     animation-duration: 2s;
-//     z-index: 2;
-//     font-family: Blinker;
-//     font-size: 24px;
-//     background-color: white;
-//     margin-top: 150px;
-//   }
-
-//   #content {
-//     grid-column-start: 2;
-//     grid-column-end: 3;
-//     grid-row-start: 2;
-//     grid-row-end: 3;
-//     padding: 50px 0 0 0;
-//     display: flex;
-//     justify-content: center;
-//   }
-
-//   #slider {
-//     grid-column-start: 1;
-//     grid-column-end: 3;
-//   }
-
-//   #text {
-//     grid-column-start: 2;
-//     grid-column-end: 3;
-//     color: #FD5CB0;
-//     font-family: roboto;
-//     font-size: 12px;
-//     min-width: 200px;
-//   }
+  #animation {
+    z-index: 2;
+    position: fixed;
+    display: block;
+    margin: auto;
+    width: 95%;
+  }
 
 
-//   #animationContainer {
-//     z-index: 3;
-//     position: fixed;
-//     width: 500px;
-//     height: 100px;
-//   }
+  #ellipse {
+    position: fixed;
+    z-index: 1;
+    width: 85%;
+    display: block;
+  }
 
-//   #ellipse2 {
-//     position: fixed;
-//     bottom: -200px;
-//     right: -20px;
-//     z-index: 1;
-//     width: 300%;
-//     min-width: 900px;
-//     overflow: none;
-//     -webkit-transition: width 2000ms ease-in-out;
-//     -moz-transition:    width 2000ms ease-in-out;
-//     -ms-transition:     width 2000ms ease-in-out;
-//     -o-transition:      width 2000ms ease-in-out;
-//     transition:         width 2000ms ease-in-out;
+  #animation2 {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    top: -20px;
+    left: 0px;
+    width: 270px;
+    min-width: 100px;
+    transform: rotate(20deg) translate(20%, 0%);
+  }
 
-//   }}
+  // #landingContainer {
+  //   pointer-events: none;
+  // }
+
+  #mobileGreeting {
+    display: inline;
+  }
+}

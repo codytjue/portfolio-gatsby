@@ -8,5 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Cody Jue`
   },
-  plugins: [`gatsby-plugin-layout`, `gatsby-plugin-react-helmet`, `gatsby-plugin-sass`]
+  plugins: [
+    `gatsby-plugin-layout`, `gatsby-plugin-react-helmet`, `gatsby-plugin-sass`,`gatsby-plugin-styled-components`
+  ]
 }

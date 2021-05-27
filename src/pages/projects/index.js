@@ -70,16 +70,37 @@ export default function Projects() {
 
   return (
     <div id="projectsPageWrapper">
-       <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
-      <div id="testContainer">
+
+       <div id="testContainer">
+       <div id="p1">
         <div id="projectContainer">
           {currentProject}
         </div>
+        </div>
+        <div id="p2">
         <div id="projectContainer2">
           {exitingProject}
         </div>
         </div>
+        </div>
+        <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
       <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
     </div>
   )
 }
+
+// return (
+//   <div id="projectsPageWrapper">
+//      <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
+//     <div id="testContainer">
+//       <div id="projectContainer">
+//         {currentProject}
+//       </div>
+//       <div id="projectContainer2">
+//         {exitingProject}
+//       </div>
+//       </div>
+//     <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
+//   </div>
+// )
+// }

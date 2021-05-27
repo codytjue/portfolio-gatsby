@@ -6,6 +6,8 @@ import gitImage from "../images/github.svg"
 import emailImage from "../images/email.svg"
 import linkedinImage from "../images/linkedin.svg"
 import resume from "../images/cody_jue_resume.pdf"
+import styled from "styled-components"
+import styles from "../styles/style-variables.js"
 
 const Layout = ({ children, pageContext }) => {
 
@@ -20,6 +22,42 @@ const Layout = ({ children, pageContext }) => {
     setTimeout(() => {navigate('/');}, 2000)
   }
 
+  const NavBar = styled.div`
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: ${styles.pink};
+    animation-name: bgFadeIn;
+    animation-duration: 2s;
+    z-index: 2;
+    font-family: Blinker;
+    font-size: 28px;
+
+    @media screen and (max-width: 1200px) {
+      color: red
+    }
+  `
+
+  const NavIcon = styled.div`
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    animation-name: bgFadeIn;
+    animation-duration: 2s;
+    z-index: 2;
+    font-family: Blinker;
+    font-size: 28px;
+    color: ${styles.pink};
+  `
+
+  const Spacer = styled.div`
+    margin: 0 20px 0 20px;
+  `
+
 
 
   if (pageContext.layout === "landing") {
@@ -33,12 +71,16 @@ const Layout = ({ children, pageContext }) => {
         <img src={logoAnimation} id="animation2" alt=""></img>
         <img src={blobs} alt="Blobs" id="ellipse3"></img>
         <div id="testing">
-        <div id="mainContainer">
-         <div id="navBar">
-           <div><Link to="/about">ABOUT</Link></div>
-           <div><Link to="/projects/">PROJECTS</Link></div>
-           <div><a href={resume} target="_blank" rel="noopener noreferrer">RESUME</a></div>
-         </div>
+         <div id="mainContainer">
+         <NavBar>
+           <Spacer>
+              <Link to="/about">ABOUT</Link>
+           </Spacer>
+           <Spacer><Link to="/projects/">PROJECTS</Link></Spacer>
+           <Spacer><a href={resume} target="_blank" rel="noopener noreferrer">RESUME</a></Spacer>
+         </NavBar>
+         <NavIcon>
+         </NavIcon>
          <div id="content">{children}</div>
          <div id="footer">
            <a href="mailto:codytjue@gmail.com"><img src={emailImage}></img></a>
