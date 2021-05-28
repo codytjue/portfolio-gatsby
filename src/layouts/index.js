@@ -29,7 +29,7 @@ const Layout = ({ children, pageContext }) => {
     justify-content: flex-end;
     align-items: flex-end;
     color: ${styles.pink};
-    animation-name: bgFadeIn;
+    animation-name: bgFadeIn
     animation-duration: 2s;
     z-index: 2;
     font-family: Blinker;
@@ -72,13 +72,13 @@ const Layout = ({ children, pageContext }) => {
         <img src={blobs} alt="Blobs" id="ellipse3"></img>
         <div id="testing">
          <div id="mainContainer">
-         <NavBar>
+         <div id="navBar">
            <Spacer>
               <Link to="/about">ABOUT</Link>
            </Spacer>
            <Spacer><Link to="/projects/">PROJECTS</Link></Spacer>
            <Spacer><a href={resume} target="_blank" rel="noopener noreferrer">RESUME</a></Spacer>
-         </NavBar>
+         </div>
          <NavIcon>
          </NavIcon>
          <div id="content">{children}</div>

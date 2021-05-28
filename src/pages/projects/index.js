@@ -55,6 +55,7 @@ export default function Projects() {
   }
 
   const handleLastProject = () => {
+    console.log("Back is being clicked");
     let projectContainer = document.getElementById("projectContainer");
     let projectContainer2 = document.getElementById("projectContainer2");
     setClickable(false)
@@ -70,21 +71,17 @@ export default function Projects() {
 
   return (
     <div id="projectsPageWrapper">
-
-       <div id="testContainer">
-       <div id="p1">
+       <div id="p1"><img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
         <div id="projectContainer">
           {currentProject}
         </div>
+        <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
         </div>
         <div id="p2">
         <div id="projectContainer2">
           {exitingProject}
         </div>
         </div>
-        </div>
-        <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
-      <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
     </div>
   )
 }
