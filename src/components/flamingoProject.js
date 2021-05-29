@@ -20,7 +20,7 @@ function Flamingo() {
 
 
   return (
-    <>
+    <div id="innerProject">
     <div className="projectImage">
       <img id="projectImage" src={flamingo1} width="500px"></img>
     </div>
@@ -34,7 +34,7 @@ function Flamingo() {
       <br/>
       <a href="https://github.com/hrnyc34-flaminGo/flaminGo-frontEnd" target="_blank" rel="noopener noreferrer"><span className="githubButton">See More on Github</span></a>
     </div>
-    </>
+    </div>
   )
 }
 

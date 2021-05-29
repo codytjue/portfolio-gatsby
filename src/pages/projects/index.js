@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import backArrow from "../../images/backArrow.svg"
 import forwardArrow from "../../images/forwardArrow.svg"
@@ -17,6 +17,32 @@ export default function Projects() {
   const [isClickable, setClickable] = useState(true)
   let currentProject = projects[currentIndex];
   let exitingProject = projects[exitingIndex];
+
+//  useEffect(() => {
+//   let spacer = document.getElementById('projectsPageWrapper')
+//   let projectContainer = document.getElementById('projectContainer')
+//   if(projectContainer) {
+//     let rect = projectContainer.getBoundingClientRect();
+//     let height = projectContainer.offsetHeight + 200
+//     console.log("this is the project window height: ", height)
+//     spacer.style.height = `${height}px`
+//   }
+
+//  }, [])
+
+ window.addEventListener("load", function() {
+  window.dispatchEvent(new Event('resize'));
+});
+
+window.onresize = function() {
+  let spacer = document.getElementById('content');
+  let projectContainer = document.getElementById('projectContainer')
+  let projectContainer2 = document.getElementById('projectContainer2')
+  let height = spacer.offsetHeight - 200
+  console.log("this is the project window height: ", height)
+  projectContainer.style.maxHeight = `${height}px`
+  projectContainer2.style.maxHeight= `${height}px`
+}
 
 
   const nextProject = () => {
@@ -55,7 +81,6 @@ export default function Projects() {
   }
 
   const handleLastProject = () => {
-    console.log("Back is being clicked");
     let projectContainer = document.getElementById("projectContainer");
     let projectContainer2 = document.getElementById("projectContainer2");
     setClickable(false)
@@ -71,14 +96,15 @@ export default function Projects() {
 
   return (
     <div id="projectsPageWrapper">
-       <div id="p1"><img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
+       <div id="p1">
+         <img src={backArrow} id="backArrow" width="30px" onClick={(isClickable)?handleLastProject : null}></img>
         <div id="projectContainer">
           {currentProject}
         </div>
         <img src={forwardArrow} id="forwardArrow" width="30px" onClick={(isClickable)?handleNextProject : null}></img>
         </div>
         <div id="p2">
-        <div id="projectContainer2">
+        <div id="projectContainer2" className="hidden">
           {exitingProject}
         </div>
         </div>
