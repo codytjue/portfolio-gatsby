@@ -82,7 +82,7 @@ body {
 }
 
 #animation2 {
-  z-index: 2;
+  z-index: 5;
   position: absolute;
   display: block;
   top: 30px;
@@ -219,30 +219,32 @@ body {
 }
 
 #mainLayout {
-//  overflow: hidden;
+overflow: none;
  width: 100%;
  height: 100%;
 }
 
 #mainLayoutBack {
-  overflow: none;
+  overflow: auto;
   width: 100%;
   height: 100%;
  }
 
 #testing {
   // overflow: hidden;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg");
   background-repeat: no-repeat;
   background-position: -10px 100px, top -10px right -10px;
   background-size: auto 100%, auto 100%;
-  animation-name: bgFadeIn;
-  animation-duration: 2s;
+  background-attachment: fixed;
   // min-height: 600px;
   // min-width: 1350px;
-  position: absolute;
+  // position: sticky;
+  overflow: scroll;
+
 }
 
 #testingBack {
@@ -260,7 +262,7 @@ body {
 #mainContainer {
   display: grid;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   grid-template-columns: 50px 1fr 50px;
   grid-template-rows: 125px minmax(450px, auto) 100px;
 }
@@ -284,6 +286,10 @@ body {
   width: 30px;
 }
 
+#links {
+  animation-name: bgFadeIn;
+  animation-duration: 2s;
+}
 
 #navBar {
   grid-column-start: 2;
@@ -292,8 +298,6 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   color: $pink;
-  animation-name: bgFadeIn;
-  animation-duration: 2s;
   z-index: 2;
   font-family: Blinker;
   font-size: 28px;
@@ -313,7 +317,7 @@ body {
   justify-content: center;
   // min-width: 1290px;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
 a {
@@ -332,9 +336,14 @@ a:hover {
 #container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  padding: 0 100px 0 100px;
   background-color: rgb(48, 9, 79, .45);
-  padding: 50px 100px;
+  max-height: 100%;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid transparent;
+  box-sizing: border-box;
+  overflow: scroll;
   // min-width: calc(100vh - 200px)
 }
 
@@ -356,10 +365,17 @@ a:hover {
   // align-items: flex-start;
   justify-content: center;
   background-color: rgb(48, 9, 79, .45);
-  padding: 50px 100px;
+  // padding: 0 50px 0 50px;
   overflow: auto;
   height: 100%;
   overflow: auto;
+  // box-sizing: border-box;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  padding: 0 30px;
+  // border-top: 50px solid transparent;
   // width: calc(100vw - 200px);
   // margin-left: auto;
   // margin-right: auto;
@@ -383,6 +399,7 @@ a:hover {
   margin-right: auto;
   height: 100%;
   overflow: auto;
+  border: 50px solid transparent;
   // left: 0;
   // right: 0;
   // text-align: center;
@@ -430,16 +447,12 @@ a:hover {
   padding: 60px 0 0 0 ;
 }
 
-#projectImage:active {
-  animation-name: bgFadeOut;
-  animation-duration: 1200ms;
-}
 
 #aboutContainer, #contactContainer, #projectsContainer, #missingContainer, #projectsPageWrapper {
   color: $pink;
   animation-name: bgFadeIn;
   animation-duration: 1200ms;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .fadeOutAnimation {
@@ -463,8 +476,7 @@ a:hover {
 #projectsPageWrapper {
   display: flex;
   align-items: center;
-  width: 100vh;
-  background-color: red;
+  width: 100vw;
 }
 
 .projectThumbnail img {
@@ -473,7 +485,10 @@ a:hover {
 }
 
 #aboutContainer {
-  padding: 50px 100px 0 100px;
+  max-height: 100%;
+  display: flex;
+  overflow: scroll;
+  margin: 50px;
 }
 
 .title {
@@ -593,12 +608,13 @@ ul {
 position: absolute;
 margin-left: auto;
 margin-right: auto;
+top: 0;
 left: 0;
 right: 0;
 text-align: center;
 width: 100%;
 height: 100%;
-z-index: 10;
+z-index: 4;
 flex-direction: column;
 align-items: center;
 justify-content: center;
@@ -624,8 +640,8 @@ background-size: auto 100%, auto 100%, auto 100%;
 
 
   #container {
-    padding: 50px 50px;
-    // min-width: 830px
+    // padding: 50px 50px;
+    // // min-width: 830px
   }
 
   #projectImage {
@@ -636,7 +652,7 @@ background-size: auto 100%, auto 100%, auto 100%;
 
 @media screen and (max-width: 1100px) {
   #projectContainer, #projectContainer2 {
-    padding: 50px 50px;
+    // padding: 50px 50px;
   }
 
   #navBar a {
@@ -645,7 +661,6 @@ background-size: auto 100%, auto 100%, auto 100%;
 
   #navBar #icon {
     display: block;
-    padding: 0 25px 0 0;
   }
 }
 
@@ -661,7 +676,7 @@ background-size: auto 100%, auto 100%, auto 100%;
   }
 
   #container {
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
   }
 
@@ -673,11 +688,11 @@ background-size: auto 100%, auto 100%, auto 100%;
 #aboutContainer img {
   float: none;
   margin: auto;
+  margin-bottom: 20px;
 }
 
   #aboutContainer{
-    padding: 100px 100px 0 100px;
-    overflow: scroll;
+    // padding: 0 100px 0 100px;
   }
 
   #innerProject {
@@ -692,6 +707,11 @@ background-size: auto 100%, auto 100%, auto 100%;
 
   #projectImage {
     width: 500px;
+    margin-bottom: 20px;
+  }
+
+  #navBar {
+    margin: 0 50px 0 0;
   }
 
 }
@@ -699,7 +719,7 @@ background-size: auto 100%, auto 100%, auto 100%;
 @media screen and (max-width: 812px) {
 
   #animation {
-    z-index: 2;
+    z-index: 5;
     position: fixed;
     display: block;
     margin: auto;
@@ -713,9 +733,8 @@ background-size: auto 100%, auto 100%, auto 100%;
     display: block;
   }
 
-  // #landingContainer {
-  //   pointer-events: none;
-  // }
+  #container {
+  }
 
   #projectImage {
     width: 400px;
@@ -725,9 +744,7 @@ background-size: auto 100%, auto 100%, auto 100%;
     width: 400px;
   }
 
-  #mobileGreeting {
-    display: inline;
-  }
+
 }
 
 
@@ -742,7 +759,11 @@ background-size: auto 100%, auto 100%, auto 100%;
     width: 95%;
   }
 
-
+#container {
+  box-sizing: border-box;
+  overflow: scroll;
+  padding: 0px 50px 0 50px;
+}
   #ellipse {
     position: fixed;
     z-index: 1;
@@ -762,8 +783,8 @@ background-size: auto 100%, auto 100%, auto 100%;
   }
 
   #aboutContainer{
-    padding: 100px 50px 0 50px;
-    overflow: scroll;
+    // padding: 100px 50px 0 50px;
+    // overflow: scroll;
   }
 
   #projectImage {
@@ -774,13 +795,6 @@ background-size: auto 100%, auto 100%, auto 100%;
     width: 250px;
   }
 
-  // #landingContainer {
-  //   pointer-events: none;
-  // }
-
-  #mobileGreeting {
-    display: inline;
-  }
 }
 
 @media screen and (max-width: 420px) {
@@ -788,9 +802,24 @@ background-size: auto 100%, auto 100%, auto 100%;
     width: 175px;
   }
 
+  #animation2 {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    top: -20px;
+    left: -10px;
+    width: 250px;
+    min-width: 100px;
+    transform: rotate(20deg) translate(20%, 0%);
+  }
+
+
   .bodyText {
     width: 175px;
   }
 
+  #navBar {
+    margin: 0 25px 0 0;
+  }
 
 }

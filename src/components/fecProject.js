@@ -17,7 +17,7 @@ function Fec() {
 
 
   return (
-    <>
+    <div id="innerProject">
     <div className="projectImage">
       <img id="projectImage" src={fec1} width="500px"></img>
     </div>
@@ -31,7 +31,7 @@ function Fec() {
       <br/>
       <a href="https://github.com/hrnyc34-FEC-Financier/fec" target="_blank" rel="noopener noreferrer"><span className="githubButton">View on Github</span></a>
     </div>
-    </>
+    </div>
   )
 }
 

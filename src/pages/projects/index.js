@@ -18,31 +18,26 @@ export default function Projects() {
   let currentProject = projects[currentIndex];
   let exitingProject = projects[exitingIndex];
 
-//  useEffect(() => {
-//   let spacer = document.getElementById('projectsPageWrapper')
-//   let projectContainer = document.getElementById('projectContainer')
-//   if(projectContainer) {
-//     let rect = projectContainer.getBoundingClientRect();
-//     let height = projectContainer.offsetHeight + 200
-//     console.log("this is the project window height: ", height)
-//     spacer.style.height = `${height}px`
-//   }
 
-//  }, [])
+ useEffect(() => {
+  window.addEventListener("load", function() {
+    window.dispatchEvent(new Event('resize'));
+  });
+  window.onresize = function() {
+    let spacer = document.getElementById('content');
+    let projectContainer = document.getElementById('projectContainer')
+    let projectContainer2 = document.getElementById('projectContainer2')
+    let height = spacer.offsetHeight - 100
+    if (projectContainer){
+      console.log("this is the project window height: ", height)
+      projectContainer.style.maxHeight = `${height}px`
+      projectContainer2.style.maxHeight= `${height}px`
+    }
+ }
+ window.dispatchEvent(new Event('resize'))
+}, [])
 
- window.addEventListener("load", function() {
-  window.dispatchEvent(new Event('resize'));
-});
 
-window.onresize = function() {
-  let spacer = document.getElementById('content');
-  let projectContainer = document.getElementById('projectContainer')
-  let projectContainer2 = document.getElementById('projectContainer2')
-  let height = spacer.offsetHeight - 200
-  console.log("this is the project window height: ", height)
-  projectContainer.style.maxHeight = `${height}px`
-  projectContainer2.style.maxHeight= `${height}px`
-}
 
 
   const nextProject = () => {

@@ -20,7 +20,7 @@ function Chi() {
 
 
   return (
-      <>
+      <div id="innerProject">
       <div className="projectImage">
         <img id="projectImage" src={chi1} width="500px"></img>
       </div>
@@ -34,7 +34,7 @@ function Chi() {
         <br/>
         <a href="https://github.com/codytjue/chi-food-journal" target="_blank" rel="noopener noreferrer"><span className="githubButton">View on Github</span></a>
       </div>
-      </>
+      </div>
   )
 }
 

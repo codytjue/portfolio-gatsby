@@ -45,11 +45,12 @@ const Layout = ({ children, pageContext }) => {
     <div id="mainLayout">
       <div id="animationContainer" onClick={handleClick} onKeyDown={handleClick}>
       </div>
-        <img src={logoAnimation} id="animation2" alt=""></img>
+        {/* <img src={logoAnimation} id="animation2" alt=""></img> */}
         <img src={blobs} alt="Blobs" id="ellipse3"></img>
         <div id="testing">
          <div id="mainContainer">
          <div id="navBar">
+         <img src={logoAnimation} id="animation2" alt=""></img>
           <Link to="/about">ABOUT</Link>
           <Link to="/projects/">PROJECTS</Link>
           <a href={resume} target="_blank" rel="noopener noreferrer">RESUME</a>
@@ -59,7 +60,6 @@ const Layout = ({ children, pageContext }) => {
          </div>
          <div id="content">
            {children}
-           <div id="spacer"></div>
            </div>
          <div id="footer">
            <a href="mailto:codytjue@gmail.com"><img src={emailImage}></img></a>
