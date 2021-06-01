@@ -82,7 +82,7 @@ body {
 }
 
 #animation2 {
-  z-index: 5;
+  z-index: 3;
   position: absolute;
   display: block;
   top: 30px;
@@ -99,15 +99,12 @@ body {
 
 }
 
-#animation2:hover {
-  cursor: pointer;
-}
 
 #animationContainer {
-  z-index: 3;
-  position: fixed;
-  // width: 500px;
-  // height: 150px;
+  z-index: 5;
+  position: absolute;
+  width: 600px;
+  height: 150px;
 }
 
 #animationContainer:hover {
@@ -232,6 +229,8 @@ overflow: none;
 
 #testing {
   // overflow: hidden;
+  animation-name: bgFadeIn;
+  animation-duration: 2s;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -726,6 +725,10 @@ background-size: auto 100%, auto 100%, auto 100%;
     width: 95%;
   }
 
+  #animationContainer {
+    width: 500px;
+  }
+
   #ellipse {
     position: fixed;
     z-index: 1;
@@ -772,14 +775,16 @@ background-size: auto 100%, auto 100%, auto 100%;
   }
 
   #animation2 {
-    z-index: 2;
-    position: absolute;
-    display: block;
-    top: -20px;
-    left: -10px;
-    width: 320px;
-    min-width: 100px;
-    transform: rotate(20deg) translate(20%, 0%);
+    top: 30px;
+    left: 150px;
+    width: 300px;
+    min-width: 180px;
+
+  }
+
+  #animationContainer {
+    width: 350px;
+    height: 90px;
   }
 
   #aboutContainer{
@@ -795,11 +800,24 @@ background-size: auto 100%, auto 100%, auto 100%;
     width: 250px;
   }
 
+  #ellipse2 {
+  width: 600%;
+  }
+
+  #ellipse3 {
+    width: 600%;
+  }
+
 }
 
 @media screen and (max-width: 420px) {
+
+  #mainContainer {
+    grid-template-rows: 100px minmax(450px, auto) 100px;
+  }
+
   #projectImage {
-    width: 175px;
+    width: 250px;
   }
 
   #animation2 {
@@ -815,11 +833,30 @@ background-size: auto 100%, auto 100%, auto 100%;
 
 
   .bodyText {
-    width: 175px;
+    width: 250px;
   }
 
   #navBar {
     margin: 0 25px 0 0;
   }
+
+  #container {
+    padding: 0 10px 0 10px;
+    border-bottom: 25px solid transparent;
+    border-top: 25px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    // min-width: calc(100vh - 200px)
+  }
+
+
+#projectContainer{
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  padding: 0 15px;
+
+}
 
 }
