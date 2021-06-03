@@ -249,7 +249,7 @@ overflow: none;
 #testingBack {
   overflow: none;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url("../images/bgAnimation1.svg"), url("../images/bgAnimation2.svg");
   background-repeat: no-repeat;
   background-position: -10px 100px, top -10px right -10px;
@@ -487,13 +487,13 @@ a:hover {
   max-height: 100%;
   display: flex;
   overflow: scroll;
-  margin: 50px;
+  margin: 100px;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .subTitle {
@@ -506,6 +506,7 @@ a:hover {
   margin: 0 0 0 30px;
   font-family: Roboto;
   font-size: 14px;
+  text-align: justify;
 }
 
 .aboutBodyText {
@@ -613,7 +614,7 @@ right: 0;
 text-align: center;
 width: 100%;
 height: 100%;
-z-index: 4;
+z-index: 6;
 flex-direction: column;
 align-items: center;
 justify-content: center;
@@ -629,6 +630,10 @@ background-size: auto 100%, auto 100%, auto 100%;
 
 #expandedMenu a{
   margin: 50px;
+  }
+
+  #emph {
+    font-size: 18px;
   }
 
 
@@ -677,6 +682,7 @@ background-size: auto 100%, auto 100%, auto 100%;
   #container {
     justify-content: flex-start;
     flex-direction: column;
+    padding: 0 50px;
   }
 
   #aboutText {

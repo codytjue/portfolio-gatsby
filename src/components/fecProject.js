@@ -29,7 +29,7 @@ function Fec() {
       <span className="bold">Built With:</span><span> React, Redux, Axios, Materials UI</span>
       <br/><br/>
       <br/>
-      <a href="https://github.com/hrnyc34-FEC-Financier/fec" target="_blank" rel="noopener noreferrer"><span className="githubButton">View on Github</span></a>
+      <a href="https://github.com/hrnyc34-FEC-Financier/fec" target="_blank" rel="noopener noreferrer"><span className="githubButton">See More on Github</span></a>
     </div>
     </div>
   )

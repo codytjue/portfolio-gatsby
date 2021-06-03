@@ -24,7 +24,6 @@ const Layout = ({ children, pageContext }) => {
   }
 
 
-
   let handleMenuExpand = () => {
     document.getElementById("expandedMenu").classList.remove("menuHide")
     document.getElementById("expandedMenu").classList.add("menuShow", "fadeInAnimation")

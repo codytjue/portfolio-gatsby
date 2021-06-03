@@ -32,7 +32,7 @@ function Chi() {
         <span className="bold">Built With:</span><span> React, Node.js, Express, Axios, MongoDB</span>
         <br/><br/>
         <br/>
-        <a href="https://github.com/codytjue/chi-food-journal" target="_blank" rel="noopener noreferrer"><span className="githubButton">View on Github</span></a>
+        <a href="https://github.com/codytjue/chi-food-journal" target="_blank" rel="noopener noreferrer"><span className="githubButton">See More on Github</span></a>
       </div>
       </div>
   )
